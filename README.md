@@ -1,33 +1,6 @@
 # Build an API in your Rails app now! (Rails 5 version)
 
-_Note 1: If you are looking for the regular readme, it's [here](docs/README.md)._
-
-_Note 2: You can contribute to this tutorial by opening an issue or even sending a pull request!_
-
-_Note 3: With the API I built, I went on and created the [same app](https://github.com/vasilakisfil/ember_on_rails5) in Ember._
-
-I will show how you can extend your Rails app and build an API without
-changing a single line of code from your existing app.
-We will be using [Michael Hartl's Rails tutorial](https://www.railstutorial.org/)
-(I actually started learning Rails and subsequently Ruby from that tutorial, I really owe a
-beer to that guy) which is a classic [Rails app](https://bitbucket.org/railstutorial/sample_app_4th_ed)
-and extend it by building an API for the app.
-
-
-## Designing our API
-Designing an API is not an easy process.
-Usually it's very difficult to know beforehand what the client will need.
-However we will make our best to support most clients needs:
-
-  * have a resty approach using the popular JSONAPI spec
-  * use hypermedia for related resources instead of embedding them
-  * have in the same response data that otherwise would require many requests in the client
-
-By the way, there is a long discussion about what REST means. Is just JSONAPI as REST as Joy Fielding's defined it?
-Definitely not. However, it's more resty than regular JSON response, plus it has a wide support in terms of libraries.
-
-Moving forward, let's add our first resource, let it be a user. But before adding the controller let's add the routes first:
-
+_
 ``` ruby
   #api
   namespace :api do
